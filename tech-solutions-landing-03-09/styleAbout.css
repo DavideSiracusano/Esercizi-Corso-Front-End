@@ -1,0 +1,41 @@
+body {
+  background-color: #f4f4f4;
+  height: 100vh; /* altezza pari a tutta la finestra */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra orizzontalmente */
+  justify-content: center; /* centra verticalmente */
+  margin: 0; /* rimuove margini predefiniti */
+}
+
+h1,
+h4 {
+  color: #6a994e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+header {
+  background: #a3b18a;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+#back-home {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #6a994e;
+  text-decoration: none;
+  color: #6a994e;
+  border-radius: 5px;
+  background-color: transparent;
+  text-align: center;
+}
+
+a {
+  color: #6a994e;
+  text-decoration: none;
+  display: block;
+}

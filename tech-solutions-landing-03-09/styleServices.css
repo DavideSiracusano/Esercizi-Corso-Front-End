@@ -1,0 +1,47 @@
+body {
+  background-color: #f4f4f4;
+  height: 100vh; /* altezza pari a tutta la finestra */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra orizzontalmente */
+  justify-content: center; /* centra verticalmente */
+  margin: 0; /* rimuove margini predefiniti */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a3b18a;
+}
+
+#services {
+  display: grid; /* attiva il grid layout */
+  grid-template-columns: repeat(3, 1fr); /* 3 colonne uguali */
+  gap: 20px; /* spazio tra le celle */
+  padding: 20px; /* margine interno del container */
+}
+
+.service-item {
+  background-color: #a3b18a; /* colore di sfondo */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#back-home {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid #6a994e;
+  text-decoration: none;
+  color: #6a994e;
+  border-radius: 5px;
+  background-color: transparent;
+  text-align: center;
+}
+
+a {
+  color: #6a994e;
+  text-decoration: none;
+  display: block;
+}

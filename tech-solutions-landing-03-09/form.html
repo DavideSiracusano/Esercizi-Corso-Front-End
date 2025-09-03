@@ -6,18 +6,44 @@
     <link rel="stylesheet" href="styleForm.css" />
   </head>
   <body>
-    <h1>Contattaci</h1>
-    <form action="submit_form.php" method="POST">
-      <label for="name">Nome:</label>
-      <input type="text" id="name" name="name" required />
+    <main>
+      <h1>Contattaci</h1>
+      <form class="contact-form" action="mailto:tua@email.com">
+        <label for="name" aria-label="Nome">Nome:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Inserisci il tuo nome"
+          required
+        />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+        <label for="email" aria-label="Email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Inserisci la tua email"
+          required
+        />
 
-      <label for="message">Messaggio:</label>
-      <textarea id="message" name="message" required></textarea>
+        <label for="message" aria-label="Messaggio">Messaggio:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Inserisci il tuo messaggio"
+          required
+        ></textarea>
 
-      <button type="submit">Invia</button>
-    </form>
+        <button type="submit">Invia</button>
+      </form>
+
+      <section>
+        <a href="./home.html" id="back-home">Torna alla Home</a>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Tech Solutions. Tutti i diritti riservati.</p>
+    </footer>
   </body>
 </html>
