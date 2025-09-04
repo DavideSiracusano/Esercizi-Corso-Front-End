@@ -39,6 +39,17 @@ h1 {
   border-radius: 5px;
 }
 
+.contact-form input:focus {
+  border: 1px solid #5a7a3d;
+  outline: none;
+}
+
+.contact-form textarea:focus {
+  resize: vertical;
+  border: 1px solid #5a7a3d;
+  outline: none;
+}
+
 .contact-form button {
   padding: 10px;
   background-color: #6a994e;
