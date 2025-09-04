@@ -1,102 +1,60 @@
+/* set correct box model */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-body {
+/* flexbox container */
+.holy-grail-flexbox {
   display: flex;
-  flex-direction: column;
   min-height: 100vh;
+  flex-wrap: wrap;
 }
 
-header {
-  background-color: blue;
-  flex-grow: 1;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+/* columns (mobile) */
+.holy-grail-flexbox > * {
+  width: 100%;
+  padding: 1rem;
 }
 
-main {
-  background-color: red;
-  flex-grow: 1;
-  padding: 20px;
-  text-align: center;
+/* background colors */
+.holy-grail-flexbox > .header {
+  background: red;
 }
-/* section {
-} */
-
-.aside-1 {
-  background-color: green;
-  flex-grow: 2;
-  padding: 20px;
-  text-align: center;
+.holy-grail-flexbox > .main-content {
+  background: blue;
 }
-
-.aside-2 {
-  background-color: orange;
-  flex-grow: 2;
-  padding: 20px;
-  text-align: center;
+.holy-grail-flexbox > .left-sidebar {
+  background: yellow;
+}
+.holy-grail-flexbox > .right-sidebar {
+  background: green;
+}
+.holy-grail-flexbox > .footer {
+  background: purple;
 }
 
-footer {
-  background-color: purple;
-  flex-grow: 1;
-  text-align: center;
-  padding: 10px 0;
-}
-
-/* Tablet (da 768px in su) */
+/* tablet breakpoint */
 @media (min-width: 768px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-    background-color: blue;
-    flex-grow: 1;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  main {
-    background-color: red;
-    flex-grow: 2;
-    padding: 20px;
-    text-align: center;
-  }
-
-  section {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .aside-1 {
-    flex-direction: row;
+  .holy-grail-flexbox > .left-sidebar,
+  .holy-grail-flexbox > .right-sidebar {
     width: 50%;
-    background-color: green;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .aside-2 {
-    flex-direction: row;
-    width: 50%;
-    background-color: orange;
-    text-align: center;
-    padding: 20px;
-  }
-
-  footer {
-    background-color: purple;
-    flex-grow: 1;
-    text-align: center;
-    padding: 10px 0;
   }
 }
 
-/* PC / Desktop (da 1024px in su) */
+/* desktop breakpoint */
 @media (min-width: 1024px) {
+  .holy-grail-flexbox > .header {
+    order: -2; /* header first */
+  }
+  .holy-grail-flexbox > .left-sidebar {
+    /* left sidebar second (first in second row) */
+    order: -1;
+  }
+  .holy-grail-flexbox > .main-content {
+    width: 50%;
+  }
+  .holy-grail-flexbox > .left-sidebar,
+  .holy-grail-flexbox > .right-sidebar {
+    width: 25%;
+  }
 }
