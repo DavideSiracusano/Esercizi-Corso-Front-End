@@ -8,10 +8,9 @@ body {
   margin: 0; /* rimuove margini predefiniti */
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #a3b18a;
+h2 {
+  color: #6a994e;
+  margin-bottom: 10px;
 }
 
 #services {
