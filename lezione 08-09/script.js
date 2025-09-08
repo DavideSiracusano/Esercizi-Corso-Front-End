@@ -28,7 +28,7 @@ console.log(typeof flag); // boolean
 console.log(typeof nulla); // object
 console.log(typeof nonDefinito); // undefined
 
-//esercizio 6
+//esercizio 6 operazioni matematiche
 let x = 7 + 5;
 let y = 10 - 3;
 let z = 4 * 6;
@@ -39,22 +39,22 @@ console.log(y); // 7
 console.log(z); // 24
 console.log(w); // 5
 
-//esercizio 7
+//esercizio 7 operatore modulo
 let resto = 17 % 3;
 console.log(resto); // 2
 
-//esercizio 8
+//esercizio 8 operatore di incremento
 let punti = 50;
 punti += 10; // punti = punti + 10
 console.log(punti); // 60
 
-//esercizio 9
+//esercizio 9 confronti
 console.log(5 == "5");
 console.log(5 === "5");
 console.log(5 != 7);
 console.log(8 !== "8");
 
-//esercizio 10 condizioni
+//esercizio 10 condizioni e stampa se maggiorenne o minorenne
 let eta = 20;
 if (eta >= 18) {
   console.log("maggiorenne");
@@ -62,7 +62,7 @@ if (eta >= 18) {
   console.log("minorenne");
 }
 
-//esercizio 11
+//esercizio 11 stampa messaggio in base al voto
 let voto = 30;
 if (voto >= 18) {
   console.log("Ottimo");
@@ -70,7 +70,7 @@ if (voto >= 18) {
   console.log("insufficiente");
 }
 
-//esercizio 12
+//esercizio 12 stampa messaggio in base all'ora
 let ora = 9;
 if (ora < 12) {
   console.log("Buongiorno");
