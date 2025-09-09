@@ -11,7 +11,7 @@ function loadItems() {
   list.innerHTML = "";
   items.forEach(function (item) {
     let li = document.createElement("li");
-    li.textContent = item;
+    li.textContent = `${item.prodotto} x ${item.quantità}`;
     list.appendChild(li);
     let deleteButton = document.createElement("button");
     deleteButton.textContent = "X";
@@ -29,7 +29,7 @@ loadItems();
 
 button.addEventListener("click", function () {
   if (input.value !== "" && input2.value !== "") {
-    items.push(`${input.value}, quantità:  ${input2.value}`);
+    items.push({ prodotto: input.value, quantità: input2.value });
     localStorage.setItem("items", JSON.stringify(items));
     loadItems();
     input.value = "";
