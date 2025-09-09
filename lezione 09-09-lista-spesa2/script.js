@@ -20,6 +20,7 @@ function loadItems() {
     deleteButton.addEventListener("click", function () {
       items.splice(items.indexOf(item), 1);
       localStorage.setItem("items", JSON.stringify(items));
+      loadItems();
     });
   });
 }
