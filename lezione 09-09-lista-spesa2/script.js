@@ -13,6 +13,8 @@ let items = JSON.parse(localStorage.getItem("items")) || [];
 
 // Span per totale
 let totalSpan = document.createElement("span");
+totalSpan.classList.add("total");
+totalSpan.textContent = "aggiungi un prodotto da comprare";
 document.body.appendChild(totalSpan);
 
 // Funzione per calcolare totale quantità, il totale è uguale al totale + la quantità
@@ -44,11 +46,12 @@ function loadItems() {
     deleteButton.classList.add("delete-button");
     li.appendChild(deleteButton);
 
-    //funzione per eliminare item
+    //funzione per eliminare item e aggiornare il totale
     deleteButton.addEventListener("click", function () {
       items.splice(items.indexOf(item), 1);
       localStorage.setItem("items", JSON.stringify(items));
       loadItems();
+      totalSpan.textContent = `il totale dei prodotti é: ${total()}`;
     });
 
     //crea bottone check
@@ -66,7 +69,6 @@ function loadItems() {
 
     //crea span per totale rifacendosi alla funzione
     totalSpan.textContent = `il totale dei prodotti è: ${total()}`;
-    totalSpan.classList.add("total");
   });
 }
 
