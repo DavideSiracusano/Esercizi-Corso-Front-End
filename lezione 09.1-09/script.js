@@ -9,10 +9,11 @@ let result = document.getElementById("result");
 
 // funzione per il calcolo, nel caso plus = somma, minus = sottrazione, times = moltiplicazione, divide = divisione
 function calc(operation) {
+  // assegnazione delle variabili a numeri interi prendendo i valori dagli input
+  let num1 = parseInt(input.value);
+  let num2 = parseInt(input2.value);
   switch (operation) {
     case "plus": {
-      let num1 = parseInt(input.value);
-      let num2 = parseInt(input2.value);
       let risultato = num1 + num2;
       input.value = "";
       input2.value = "";
@@ -21,8 +22,6 @@ function calc(operation) {
       break;
     }
     case "minus": {
-      let num1 = parseInt(input.value);
-      let num2 = parseInt(input2.value);
       let risultato = num1 - num2;
       input.value = "";
       input2.value = "";
@@ -30,8 +29,6 @@ function calc(operation) {
       break;
     }
     case "times": {
-      let num1 = parseInt(input.value);
-      let num2 = parseInt(input2.value);
       let risultato = num1 * num2;
       input.value = "";
       input2.value = "";
@@ -39,8 +36,6 @@ function calc(operation) {
       break;
     }
     case "divide": {
-      let num1 = parseInt(input.value);
-      let num2 = parseInt(input2.value);
       let risultato = num1 / num2;
       input.value = "";
       input2.value = "";
