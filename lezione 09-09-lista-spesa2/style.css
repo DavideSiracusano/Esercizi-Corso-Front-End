@@ -39,6 +39,10 @@ li {
   margin-bottom: 1rem;
 }
 
+#quantity-input {
+  margin-bottom: 1rem;
+}
+
 #add-button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
