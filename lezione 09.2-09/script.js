@@ -18,5 +18,6 @@ if (array1.includes("verde")) {
 array1[1] = "viola";
 console.log(array1);
 
+//elimina il primo colore
 array1.shift();
 console.log(array1);
