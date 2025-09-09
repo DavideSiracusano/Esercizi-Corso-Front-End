@@ -29,7 +29,7 @@ loadItems();
 
 button.addEventListener("click", function () {
   if (input.value !== "" && input2.value !== "") {
-    items.push(`${input.value} quantità:  ${input2.value}`);
+    items.push(`${input.value}, quantità:  ${input2.value}`);
     localStorage.setItem("items", JSON.stringify(items));
     loadItems();
     input.value = "";
