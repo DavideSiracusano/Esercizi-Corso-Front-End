@@ -12,37 +12,32 @@ function calc(operation) {
   // assegnazione delle variabili a numeri interi prendendo i valori dagli input
   let num1 = parseInt(input.value);
   let num2 = parseInt(input2.value);
+  let risultato;
   switch (operation) {
     case "plus": {
-      let risultato = num1 + num2;
-      input.value = "";
-      input2.value = "";
+      risultato = num1 + num2;
       //template literal per mostrare il risultato
       result.textContent = `il risultato è: ${risultato}`;
       break;
     }
     case "minus": {
-      let risultato = num1 - num2;
-      input.value = "";
-      input2.value = "";
+      risultato = num1 - num2;
       result.textContent = `il risultato è: ${risultato}`;
       break;
     }
     case "times": {
-      let risultato = num1 * num2;
-      input.value = "";
-      input2.value = "";
+      risultato = num1 * num2;
       result.textContent = `il risultato è: ${risultato}`;
       break;
     }
     case "divide": {
-      let risultato = num1 / num2;
-      input.value = "";
-      input2.value = "";
+      risultato = num1 / num2;
       result.textContent = `il risultato è: ${risultato}`;
       break;
     }
   }
+  input.value = "";
+  input2.value = "";
 }
 
 // event listener per i bottoni, al click esegue la funzione calc con il parametro corrispondente
