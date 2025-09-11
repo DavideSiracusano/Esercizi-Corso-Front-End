@@ -60,17 +60,19 @@ console.log("Presenti", filterStudenti);
 
 //foreach per stampare tutti gli studenti se presenti o meno
 
-tutti.forEach((studente) => {
-  if (studente.presente === true) {
+function renderLista() {
+  out.innerHTML = "";
+  tutti.forEach((studente) => {
     const li = document.createElement("li");
-    li.textContent = `${studente.nome} - ✔️`;
+    li.textContent = studente.presente
+      ? `${studente.nome} - ✔️`
+      : `${studente.nome} - ❌`;
     out.appendChild(li);
-  } else {
-    const li = document.createElement("li");
-    li.textContent = `${studente.nome} - ❌`;
-    out.appendChild(li);
-  }
-});
+  });
+}
+
+// prima renderizzazione
+renderLista();
 
 //destructuring per stampare tutti gli studenti
 function presentaStudenti({ nome, voto, presente }) {
@@ -86,10 +88,16 @@ const input = document.getElementById("input");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const studente = tutti.find((studente) => studente.nome === input.value);
-  if (studente) {
-    tutti.splice(tutti.indexOf(studente), 1);
+
+  const trovati = tutti.filter(
+    (studente) => studente.nome === input.value.trim()
+  );
+  if (trovati.length > 0) {
+    const index = tutti.indexOf(trovati[0]); // prendo il primo elemento trovato da filter
+    tutti.splice(index, 1);
+    renderLista();
     input.value = "";
   }
-  console.log(tutti);
+
+  console.log("Studenti rimasti:", tutti);
 });
